@@ -13,8 +13,11 @@ let package = Package(
     targets: [
         .target(
             name: "TTTAttributedLabel",
-            path: ".",
-            publicHeadersPath: "Sources/TTTAttributedLabel"
+            path: "Sources/TTTAttributedLabel",
+            publicHeadersPath: "",
+            cSettings: [
+              .headerSearchPath("include"),
+            ]
         )
     ]
 )
