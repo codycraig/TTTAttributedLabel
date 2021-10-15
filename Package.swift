@@ -13,8 +13,8 @@ let package = Package(
     targets: [
         .target(
             name: "TTTAttributedLabel",
-            path: "Sources/TTTAttributedLabel",
-            exclude: ["Example", "Carthage"]
+            path: ".",
+            publicHeadersPath: "Sources/TTTAttributedLabel"
         )
     ]
 )
