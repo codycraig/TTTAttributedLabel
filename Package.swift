@@ -10,7 +10,13 @@ let package = Package(
             targets: ["TTTAttributedLabel"]
         )
     ],
-    targets: [
-        .target(name: "TTTAttributedLabel")
-    ]
+    .target(
+            name: "TTTAttributedLabel",
+            path: "Source/TTTAttributedLabel",
+            exclude: ["Example", "Carthage"],
+            publicHeadersPath: "",
+            cSettings: [
+                .headerSearchPath(""),
+            ]
+    )
 )
