@@ -3,20 +3,22 @@ import PackageDescription
 
 let package = Package(
     name: "TTTAttributedLabel",
-    platforms: [.iOS(.v8)],
+    platforms: [.iOS(.v9)],
     products: [
         .library(
             name: "TTTAttributedLabel",
             targets: ["TTTAttributedLabel"]
         )
     ],
-    .target(
+    targets: [
+        .target(
             name: "TTTAttributedLabel",
-            path: "Source/TTTAttributedLabel",
+            path: "Sources/TTTAttributedLabel",
             exclude: ["Example", "Carthage"],
             publicHeadersPath: "",
             cSettings: [
-                .headerSearchPath(""),
+                .headerSearchPath("")
             ]
-    )
+        )
+    ]
 )
